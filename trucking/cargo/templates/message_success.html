@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    
+     {% if message %}
+    <h3> message  | {{ message.Message}}</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-centered">
+                <h3> name : {{ message.name}}</h3>
+                <h3> surname : {{ message.surname}}</h3>
+                <h3> email: {{ message.email}}</h3>
+
+
+                <p class="bold"> Our staff will contact you, thank you!</p>
+            </div>
+        </div>
+
+
+    {% else %}
+        <h3>We can not find post you're looking for</h3>
+    {% endif %}
+
+          
+{% endblock %}
+

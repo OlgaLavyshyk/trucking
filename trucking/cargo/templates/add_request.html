@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class = "structure">   
+    <div class = "sub"><h3>Submit your application</h3></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-centered">
+                 <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                                        
+               <!-- # в каждой форме должна быть борьба со взломом  -->
+                    {{ form.as_p }}
+              <!-- отрисовали форму -->
+                    <button type="submit">SEND THE MESSAGE</button>
+              <!-- добавили кнопку -->
+                 </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %} 
